@@ -1,0 +1,20 @@
+<package>
+
+  <name>wm_trajectory_manager</name>
+  <version>0.3.0</version>
+  <description>
+    take a frame rom a 2d image and depth from camera and turn them into a 3d box
+  </description>
+  <author email="philippe117@live.fr">Philippe La Madeleine</author>
+  <maintainer email="philippe117@live.fr">Philippe La Madeleine</maintainer>
+
+  <license>BSD</license>
+
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>roscpp</build_depend>
+  <run_depend>roscpp</run_depend>
+  <build_depend>trajectory_msgs</build_depend>
+  <run_depend>trajectory_msgs</run_depend>
+
+</package>
