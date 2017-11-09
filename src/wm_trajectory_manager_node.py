@@ -18,7 +18,7 @@ class trajectory_manager:
         # srv = wm_trajectory_manager.srv.save_trajectory()
         name = self.generateName(srv.file)
         file = open(name, 'w+')
-        file.write(str(srv.trajectory))
+        file.write("saved_trajectories/"+str(srv.trajectory))
         print "service save"
         return []
 
@@ -36,7 +36,7 @@ class trajectory_manager:
 
     def run(self, srv):
         print "service run"
-        command = "rostopic pub -f "+str(srv.file)+" /"+self.controller+"/Follow_trajectory/goal trajectory_msgs/JointTrajectory"
+        command = "rostopic pub -f saved_trajectories/"+str(srv.file)+" /"+self.controller+"/command trajectory_msgs/JointTrajectory"
         print command
         os.system(command)
         return []
