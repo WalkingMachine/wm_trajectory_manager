@@ -16,9 +16,9 @@ class trajectory_manager:
 
     def save(self, srv):
         # srv = wm_trajectory_manager.srv.save_trajectory()
-        name = self.generateName(srv.file)
+        name = self.generateName("saved_trajectories/"+srv.file)
         file = open(name, 'w+')
-        file.write("saved_trajectories/"+str(srv.trajectory))
+        file.write(str(srv.trajectory))
         print "service save"
         return []
 
