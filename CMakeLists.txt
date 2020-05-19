@@ -6,6 +6,11 @@ find_package(catkin REQUIRED COMPONENTS
         message_generation
         )
 
+# Install pathlib
+execute_process (
+    COMMAND bash -c "python2.7 -m pip install pathlib"
+)
+
 add_service_files(
         DIRECTORY srv
         FILES
@@ -26,4 +31,3 @@ catkin_package(
 include_directories(
         ${catkin_INCLUDE_DIRS}
 )
-
